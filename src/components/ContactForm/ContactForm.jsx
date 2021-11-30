@@ -14,12 +14,14 @@ export default function ContactForm() {
             phone,
         };
         
-        if (contacts.find(
-        (contact) => contact.name.toLowerCase() === name.toLowerCase())){
+        
+        if (contacts!==undefined&&contacts.find(
+        (contact) => name.toLowerCase() === contact.name.toLowerCase())){
             alert('Contact is already added !!!');
             e.currentTarget.reset();
             return;
         }
+        
         addContact(newContact);
         e.currentTarget.reset();
     };

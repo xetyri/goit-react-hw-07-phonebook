@@ -22,7 +22,7 @@ export default function App() {
   return (
     <>
        <Container>
-      {data && <ContactForm contacts={data} />}
+      <ContactForm contacts={data} />
       <Filter value={filter} onChange={changeFilter} />
       {data && <ContactList contacts={getVisibleContacts()} />}
       </Container>
